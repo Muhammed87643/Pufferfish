@@ -21,6 +21,11 @@ jobs:
       contents: read
 
     steps:
+    - name: Add info
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+    
     - uses: actions/checkout@v4
     - name: Set up JDK 21
       uses: actions/setup-java@v4
